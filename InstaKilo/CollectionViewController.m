@@ -65,7 +65,9 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CollectionViewCell *cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    PhotoObject *photoObject = self.manager.photos[indexPath.item];
+    Album *album = self.manager.subjects.albums[indexPath.section];
+    PhotoObject *photoObject = album.photoCollection[indexPath.item];
+  //  PhotoObject *photoObject = self.manager.photos[indexPath.item];
     cell.photoObject = photoObject;
     // Configure the cell
     
