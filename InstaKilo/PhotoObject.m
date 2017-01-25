@@ -10,4 +10,13 @@
 
 @implementation PhotoObject
 
+
+-(instancetype)initWithName:name{
+    self = [super init];
+    if(self){
+        _image = [UIImage imageNamed:name];
+    }
+    return self;
+}
+
 @end

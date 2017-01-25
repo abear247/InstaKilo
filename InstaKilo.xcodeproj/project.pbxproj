@@ -17,6 +17,9 @@
 		C8DFBFA91E39225E0098BE2B /* InstaKiloUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFA81E39225E0098BE2B /* InstaKiloUITests.m */; };
 		C8DFBFB81E3923010098BE2B /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFB71E3923010098BE2B /* CollectionViewCell.m */; };
 		C8DFBFBB1E39235E0098BE2B /* PhotoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFBA1E39235E0098BE2B /* PhotoObject.m */; };
+		C8DFBFC11E3928B50098BE2B /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFC01E3928B50098BE2B /* CollectionReusableView.m */; };
+		C8DFBFC41E3929020098BE2B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFC31E3929020098BE2B /* CollectionViewController.m */; };
+		C8DFBFC71E392CEC0098BE2B /* PhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFC61E392CEC0098BE2B /* PhotoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,12 @@
 		C8DFBFB71E3923010098BE2B /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		C8DFBFB91E39235E0098BE2B /* PhotoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoObject.h; sourceTree = "<group>"; };
 		C8DFBFBA1E39235E0098BE2B /* PhotoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoObject.m; sourceTree = "<group>"; };
+		C8DFBFBF1E3928B50098BE2B /* CollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
+		C8DFBFC01E3928B50098BE2B /* CollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableView.m; sourceTree = "<group>"; };
+		C8DFBFC21E3929020098BE2B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		C8DFBFC31E3929020098BE2B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		C8DFBFC51E392CEC0098BE2B /* PhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoManager.h; sourceTree = "<group>"; };
+		C8DFBFC61E392CEC0098BE2B /* PhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,12 @@
 				C8DFBF8A1E39225D0098BE2B /* ViewController.m */,
 				C8DFBFB61E3923010098BE2B /* CollectionViewCell.h */,
 				C8DFBFB71E3923010098BE2B /* CollectionViewCell.m */,
+				C8DFBFBF1E3928B50098BE2B /* CollectionReusableView.h */,
+				C8DFBFC01E3928B50098BE2B /* CollectionReusableView.m */,
+				C8DFBFC21E3929020098BE2B /* CollectionViewController.h */,
+				C8DFBFC31E3929020098BE2B /* CollectionViewController.m */,
+				C8DFBFC51E392CEC0098BE2B /* PhotoManager.h */,
+				C8DFBFC61E392CEC0098BE2B /* PhotoManager.m */,
 				C8DFBFB91E39235E0098BE2B /* PhotoObject.h */,
 				C8DFBFBA1E39235E0098BE2B /* PhotoObject.m */,
 				C8DFBF8C1E39225D0098BE2B /* Main.storyboard */,
@@ -284,10 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8DFBFBB1E39235E0098BE2B /* PhotoObject.m in Sources */,
+				C8DFBFC41E3929020098BE2B /* CollectionViewController.m in Sources */,
 				C8DFBF8B1E39225D0098BE2B /* ViewController.m in Sources */,
 				C8DFBF881E39225D0098BE2B /* AppDelegate.m in Sources */,
 				C8DFBFB81E3923010098BE2B /* CollectionViewCell.m in Sources */,
 				C8DFBF851E39225D0098BE2B /* main.m in Sources */,
+				C8DFBFC71E392CEC0098BE2B /* PhotoManager.m in Sources */,
+				C8DFBFC11E3928B50098BE2B /* CollectionReusableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

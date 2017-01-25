@@ -10,4 +10,10 @@
 
 @implementation CollectionViewCell
 
+-(void)setPhotoObject:(PhotoObject *)photoObject{
+    self.imageView.image = photoObject.image;
+    _photoObject = photoObject;
+}
+
+
 @end

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CE790DA70D64C3916EB080A68E8C2CCD73D13F7E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3B254D99F8C971C11F04DE1004DE22FB9C2EB74D" : 9223372036854775807,
+    "CE790DA70D64C3916EB080A68E8C2CCD73D13F7E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B2077B95-F661-4DE2-B663-8902A25C5965",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3B254D99F8C971C11F04DE1004DE22FB9C2EB74D" : "",
+    "CE790DA70D64C3916EB080A68E8C2CCD73D13F7E" : "InstaKilo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InstaKilo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InstaKilo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/abear247\/Patient-Doctor.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B254D99F8C971C11F04DE1004DE22FB9C2EB74D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/abear247\/InstaKilo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE790DA70D64C3916EB080A68E8C2CCD73D13F7E"
+    }
+  ]
+}
