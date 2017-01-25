@@ -47,7 +47,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f6x-us-ucb">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="f6x-us-ucb" customClass="CollectionReusableView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -57,11 +57,11 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN8-xz-ljN">
                                             <rect key="frame" x="152" y="8" width="71" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <constraints>
                                         <constraint firstItem="NN8-xz-ljN" firstAttribute="centerY" secondItem="t3V-Kb-5UU" secondAttribute="centerY" id="Gnk-d1-Nrc"/>
                                         <constraint firstItem="NN8-xz-ljN" firstAttribute="centerX" secondItem="t3V-Kb-5UU" secondAttribute="centerX" id="hSg-O9-PrG"/>
@@ -74,13 +74,26 @@
                                 <constraint firstAttribute="bottom" secondItem="t3V-Kb-5UU" secondAttribute="bottom" id="hsa-xS-VXg"/>
                                 <constraint firstItem="t3V-Kb-5UU" firstAttribute="top" secondItem="f6x-us-ucb" secondAttribute="top" id="uUV-1J-zaR"/>
                             </constraints>
+                            <connections>
+                                <outlet property="label" destination="NN8-xz-ljN" id="8e2-VL-tNh"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="y2D-xW-Rif" id="fs0-eW-gv2"/>
                             <outlet property="delegate" destination="y2D-xW-Rif" id="grh-X6-v6v"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="dnE-za-EFa"/>
+                    <navigationItem key="navigationItem" id="dnE-za-EFa">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="4ap-Mw-olj">
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeA-J7-cjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

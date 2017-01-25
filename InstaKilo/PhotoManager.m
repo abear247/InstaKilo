@@ -7,6 +7,7 @@
 //
 
 #import "PhotoManager.h"
+#import "SubjectSorter.h"
 
 @implementation PhotoManager
 
@@ -14,20 +15,41 @@
     self = [super init];
     if (self){
         NSMutableArray *temp = [NSMutableArray new];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"Fountain"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"HotChocolate"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"Ikea"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"Matrix"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"Meme"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"Mountains"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"MrMeseeks"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"PokemonGo"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"Wallpaper"]];
-        [temp addObject:[[PhotoObject alloc] initWithName:@"YikYak"]];
+        _subjects = [SubjectSorter new];
+        [self.subjects createPhotos];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"Fountain" subject:@"Nature" location:@"Vancouver"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"HotChocolate" subject:@"Food" location:@"Vancouver"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"Ikea" subject:@"Store" location:@"Toronto"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"Matrix" subject:@"School" location:@"Vancouver"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"Meme" subject:@"Meme" location:@"Internet"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"Mountains" subject:@"Nature" location:@"Vancouver"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"MrMeSeeks" subject:@"TV" location:@"Internet"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"PokemonGo" subject:@"Phone" location:@"Vancouver"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"Wallpaper" subject:@"Phone" location:@"Internet"]];
+        [temp addObject:[[PhotoObject alloc] initWithName:@"YikYak" subject:@"Phone" location:@"Internet"]];
         _photos = [temp copy];
     }
     return self;
 }
+
+
+//-(void)createPhotos{
+//    for(PhotoObject *photo in self.photoCategories){
+//        switch (self.segment) {
+//            case 0:{
+//                 [self.photoCategoriesDict setObject:photo forKey:photo.subject];
+//            }
+//                break;
+//            case 1:{
+//                 [self.photoCategoriesDict setObject:photo forKey:photo.location];
+//            }
+//            default:
+//                break;
+//        }
+//    }
+//}
+
+
 
 
 

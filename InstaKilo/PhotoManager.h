@@ -8,9 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "PhotoObject.h"
+#import "Album.h"
+@class SubjectSorter;
+
+
+
+
+//@protocol PhotoManagerDelegate <NSObject>;
+//@property NSString *section;
+//
+//-(NSArray *)createPhotos;
+//
+//@end
+
 
 @interface PhotoManager : NSObject
 @property NSArray <PhotoObject *>*photos;
-//-(PhotoObject *)photoObjectAtIndexPath:(NSIndexPath *)indexPath;
+@property (weak,nonatomic) id photoManagerDelegate;
+@property (nonatomic) SubjectSorter *subjects;
+
+
 
 @end

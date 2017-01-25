@@ -11,12 +11,16 @@
 @implementation PhotoObject
 
 
--(instancetype)initWithName:name{
+-(instancetype)initWithName:name subject:(NSString *)subject location:(NSString *)location{
     self = [super init];
     if(self){
         _image = [UIImage imageNamed:name];
+        _subject = subject;
+        _location = location;
     }
     return self;
 }
+
+
 
 @end

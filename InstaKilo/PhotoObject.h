@@ -10,5 +10,7 @@
 
 @interface PhotoObject : NSObject
 @property UIImage *image;
--(instancetype)initWithName:(NSString *)name;
+@property NSString *subject;
+@property NSString *location;
+-(instancetype)initWithName:(NSString *)name subject:(NSString *)subject location:(NSString *)location;
 @end

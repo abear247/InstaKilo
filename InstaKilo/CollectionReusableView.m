@@ -10,4 +10,8 @@
 
 @implementation CollectionReusableView
 
+-(void)setUpSections:(Album *)album{
+    self.label.text = album.identifier;
+}
+
 @end

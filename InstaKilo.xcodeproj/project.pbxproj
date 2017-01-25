@@ -20,6 +20,9 @@
 		C8DFBFC11E3928B50098BE2B /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFC01E3928B50098BE2B /* CollectionReusableView.m */; };
 		C8DFBFC41E3929020098BE2B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFC31E3929020098BE2B /* CollectionViewController.m */; };
 		C8DFBFC71E392CEC0098BE2B /* PhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFC61E392CEC0098BE2B /* PhotoManager.m */; };
+		C8DFBFCD1E39538D0098BE2B /* SubjectSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFCC1E39538D0098BE2B /* SubjectSorter.m */; };
+		C8DFBFD01E3953A20098BE2B /* LocationSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFCF1E3953A20098BE2B /* LocationSorter.m */; };
+		C8DFBFD31E3962040098BE2B /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFBFD21E3962040098BE2B /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,12 @@
 		C8DFBFC31E3929020098BE2B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		C8DFBFC51E392CEC0098BE2B /* PhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoManager.h; sourceTree = "<group>"; };
 		C8DFBFC61E392CEC0098BE2B /* PhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoManager.m; sourceTree = "<group>"; };
+		C8DFBFCB1E39538D0098BE2B /* SubjectSorter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectSorter.h; sourceTree = "<group>"; };
+		C8DFBFCC1E39538D0098BE2B /* SubjectSorter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectSorter.m; sourceTree = "<group>"; };
+		C8DFBFCE1E3953A20098BE2B /* LocationSorter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSorter.h; sourceTree = "<group>"; };
+		C8DFBFCF1E3953A20098BE2B /* LocationSorter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSorter.m; sourceTree = "<group>"; };
+		C8DFBFD11E3962040098BE2B /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		C8DFBFD21E3962040098BE2B /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +137,12 @@
 				C8DFBFC31E3929020098BE2B /* CollectionViewController.m */,
 				C8DFBFC51E392CEC0098BE2B /* PhotoManager.h */,
 				C8DFBFC61E392CEC0098BE2B /* PhotoManager.m */,
+				C8DFBFCB1E39538D0098BE2B /* SubjectSorter.h */,
+				C8DFBFCC1E39538D0098BE2B /* SubjectSorter.m */,
+				C8DFBFCE1E3953A20098BE2B /* LocationSorter.h */,
+				C8DFBFCF1E3953A20098BE2B /* LocationSorter.m */,
+				C8DFBFD11E3962040098BE2B /* Album.h */,
+				C8DFBFD21E3962040098BE2B /* Album.m */,
 				C8DFBFB91E39235E0098BE2B /* PhotoObject.h */,
 				C8DFBFBA1E39235E0098BE2B /* PhotoObject.m */,
 				C8DFBF8C1E39225D0098BE2B /* Main.storyboard */,
@@ -300,12 +315,15 @@
 			files = (
 				C8DFBFBB1E39235E0098BE2B /* PhotoObject.m in Sources */,
 				C8DFBFC41E3929020098BE2B /* CollectionViewController.m in Sources */,
+				C8DFBFCD1E39538D0098BE2B /* SubjectSorter.m in Sources */,
+				C8DFBFD01E3953A20098BE2B /* LocationSorter.m in Sources */,
 				C8DFBF8B1E39225D0098BE2B /* ViewController.m in Sources */,
 				C8DFBF881E39225D0098BE2B /* AppDelegate.m in Sources */,
 				C8DFBFB81E3923010098BE2B /* CollectionViewCell.m in Sources */,
 				C8DFBF851E39225D0098BE2B /* main.m in Sources */,
 				C8DFBFC71E392CEC0098BE2B /* PhotoManager.m in Sources */,
 				C8DFBFC11E3928B50098BE2B /* CollectionReusableView.m in Sources */,
+				C8DFBFD31E3962040098BE2B /* Album.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

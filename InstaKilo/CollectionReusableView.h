@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoManager.h"
+#import "PhotoObject.h"
 
 @interface CollectionReusableView : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UILabel *label;
+-(void)setUpSections:(Album *)album;
 
 @end

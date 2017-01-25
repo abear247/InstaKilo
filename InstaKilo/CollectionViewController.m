@@ -8,6 +8,8 @@
 
 #import "CollectionViewController.h"
 #import "CollectionViewCell.h"
+#import "CollectionReusableView.h"
+#import "SubjectSorter.h"
 
 @interface CollectionViewController ()
 
@@ -20,6 +22,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.manager = [PhotoManager new];
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -27,6 +30,11 @@ static NSString * const reuseIdentifier = @"Cell";
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout*) self.collectionView.collectionViewLayout;
+    CGFloat width = self.view.frame.size.width/2;
+    CGSize size = CGSizeMake(width, width);
+    layout.itemSize = size;
 }
 
 
@@ -43,15 +51,15 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
+    return self.manager.subjects.albums.count;
     
-    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return self.manager.photos.count;
+    Album *album = self.manager.subjects.albums[section];
+    return album.photoCollection.count;
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,6 +70,16 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     return cell;
+}
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    CollectionReusableView *view = (CollectionReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                       withReuseIdentifier:@"Cell"
+                                              forIndexPath:indexPath];
+    Album *album = self.manager.subjects.albums[indexPath.section];
+    [view setUpSections:album];
+    return view;
+    
 }
 
 #pragma mark <UICollectionViewDelegate>
