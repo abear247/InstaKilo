@@ -21,7 +21,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.manager.collectionView = self.collectionView;
     self.manager = [PhotoManager new];
+  
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -55,6 +57,20 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
+- (IBAction)switchDatasource:(UISegmentedControl*)sender {
+    
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.collectionView.dataSource = self.manager.subjects;
+            break;
+        case 1:
+            self.collectionView.dataSource = self.manager.locations;
+            break;
+        default:
+            break;
+    }
+     [self.collectionView reloadData];
+}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     Album *album = self.manager.subjects.albums[section];

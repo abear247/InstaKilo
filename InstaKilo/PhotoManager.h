@@ -6,18 +6,18 @@
 //  Copyright © 2017 Alex Bearinger. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 #import "PhotoObject.h"
 #import "Album.h"
 @class SubjectSorter;
-
+@class LocationSorter;
 
 
 
 //@protocol PhotoManagerDelegate <NSObject>;
 //@property NSString *section;
-//
-//-(NSArray *)createPhotos;
+//@property NSArray <Album*>*albums;
+//-(NSArray *)createPhotos:(NSArray *)photos;
 //
 //@end
 
@@ -26,6 +26,8 @@
 @property NSArray <PhotoObject *>*photos;
 @property (weak,nonatomic) id photoManagerDelegate;
 @property (nonatomic) SubjectSorter *subjects;
+@property (nonatomic) LocationSorter *locations;
+@property (nonatomic) UICollectionView *collectionView;
 
 
 

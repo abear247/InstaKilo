@@ -6,9 +6,11 @@
 //  Copyright © 2017 Alex Bearinger. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 #import "PhotoManager.h"
 
-@interface LocationSorter : NSObject
-
+@interface LocationSorter : NSObject <UICollectionViewDataSource>
+@property NSArray <Album*>*albums;
+@property (nonatomic) NSArray *data;
+-(instancetype)initWithPhotosArray:(NSArray <PhotoObject*>*)photos;
 @end

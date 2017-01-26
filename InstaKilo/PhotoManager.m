@@ -8,6 +8,7 @@
 
 #import "PhotoManager.h"
 #import "SubjectSorter.h"
+#import "LocationSorter.h"
 
 @implementation PhotoManager
 
@@ -15,8 +16,8 @@
     self = [super init];
     if (self){
         NSMutableArray *temp = [NSMutableArray new];
-        _subjects = [SubjectSorter new];
-        [self.subjects createPhotos];
+        
+     //   [self.subjects createPhotos];
         [temp addObject:[[PhotoObject alloc] initWithName:@"Fountain" subject:@"Nature" location:@"Vancouver"]];
         [temp addObject:[[PhotoObject alloc] initWithName:@"HotChocolate" subject:@"Food" location:@"Vancouver"]];
         [temp addObject:[[PhotoObject alloc] initWithName:@"Ikea" subject:@"Store" location:@"Toronto"]];
@@ -28,6 +29,9 @@
         [temp addObject:[[PhotoObject alloc] initWithName:@"Wallpaper" subject:@"Phone" location:@"Internet"]];
         [temp addObject:[[PhotoObject alloc] initWithName:@"YikYak" subject:@"Phone" location:@"Internet"]];
         _photos = [temp copy];
+        _subjects = [[SubjectSorter alloc] initWithPhotosArray:_photos];
+        _locations = [[LocationSorter alloc] initWithPhotosArray:_photos];
+        _collectionView.dataSource = _subjects;
     }
     return self;
 }

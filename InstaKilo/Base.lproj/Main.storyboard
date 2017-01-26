@@ -92,6 +92,9 @@
                                 <segment title="First"/>
                                 <segment title="Second"/>
                             </segments>
+                            <connections>
+                                <action selector="switchDatasource:" destination="y2D-xW-Rif" eventType="valueChanged" id="Kha-pq-IMA"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                 </collectionViewController>

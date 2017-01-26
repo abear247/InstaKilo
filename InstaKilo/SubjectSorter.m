@@ -9,29 +9,59 @@
 #import "SubjectSorter.h"
 #import "Album.h"
 #import "PhotoObject.h"
+#import "CollectionViewCell.h"
+#import "CollectionReusableView.h"
 
 @implementation SubjectSorter
 
+-(instancetype)initWithPhotosArray:(NSArray <PhotoObject*>*)photos{
+    self = [super init];
+    if(self){
+        _data = photos;
+        [self createPhotos];
+    }
+    return self;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    CollectionViewCell *cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    Album *album = self.albums[indexPath.section];
+    PhotoObject *photoObject = album.photoCollection[indexPath.item];
+    //  PhotoObject *photoObject = self.manager.photos[indexPath.item];
+    cell.photoObject = photoObject;
+    // Configure the cell
+    
+    return cell;
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return self.albums.count;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    Album *album = self.albums[section];
+    return album.photoCollection.count;
+}
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    CollectionReusableView *view = (CollectionReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                                                                withReuseIdentifier:@"Cell"
+                                                                                                       forIndexPath:indexPath];
+    Album *album = self.albums[indexPath.section];
+    [view setUpSections:album];
+    return view;
+    
+}
+
 -(NSArray *)createPhotos{
     NSMutableArray *albums = [NSMutableArray new];
-    NSMutableArray *temp = [NSMutableArray new];
     
-    [temp addObject:[[PhotoObject alloc] initWithName:@"Fountain" subject:@"Nature" location:@"Vancouver"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"HotChocolate" subject:@"Food" location:@"Vancouver"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"Ikea" subject:@"Store" location:@"Toronto"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"Matrix" subject:@"School" location:@"Vancouver"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"Meme" subject:@"Meme" location:@"Internet"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"Mountains" subject:@"Nature" location:@"Vancouver"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"MrMeseeks" subject:@"TV" location:@"Internet"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"PokemonGo" subject:@"Phone" location:@"Vancouver"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"Wallpaper" subject:@"Phone" location:@"Internet"]];
-    [temp addObject:[[PhotoObject alloc] initWithName:@"YikYak" subject:@"Phone" location:@"Internet"]];
     Album *album = [[Album alloc] initWithName:@"Nature"];
-    [album.photoCollection addObject:temp[0]];
+    [album.photoCollection addObject:self.data[0]];
     [albums addObject:album];
     bool added = YES;
     
-    for(PhotoObject *photo in temp){
+    for(PhotoObject *photo in self.data){
         for(Album *album in albums){
             if ([album.identifier isEqualToString:photo.subject]){
                 [album.photoCollection addObject:photo];
